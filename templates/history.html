@@ -1,0 +1,56 @@
+
+{% extends "base.html" %}
+
+{% block title %}IR PROJECT | Search History{% endblock %}
+
+{% block content %}
+
+<section class="wrap pagehead">
+
+    <div class="eyebrow">
+        // ACTIVITY MONITOR
+    </div>
+
+    <h1>Search History</h1>
+
+    <p class="muted">
+        Previously executed search queries.
+    </p>
+
+</section>
+
+<section class="wrap section">
+
+    {% if rows %}
+
+    <div class="panel history-list">
+
+        {% for q,n,t in rows %}
+
+        <div class="history-row">
+
+            <a href="/search?q={{ q|urlencode }}">
+                > {{ q }}
+            </a>
+
+            <span class="muted">
+                {{ n }} results | {{ t }}
+            </span>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    {% else %}
+
+    <div class="empty">
+        No search history available.
+    </div>
+
+    {% endif %}
+
+</section>
+
+{% endblock %}

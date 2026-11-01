@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "act": "Information Technology Act, 2000",
+    "section": "43",
+    "title": "Penalty and compensation for damage to computer systems",
+    "category": "Cybercrime",
+    "text": "This section concerns unauthorised acts involving a computer, computer system or network, such as accessing or downloading data without permission, introducing a computer contaminant, damaging or disrupting a system, or denying authorised access. It provides for liability to pay damages by way of compensation to the affected person.",
+    "source": "https://www.indiacode.nic.in/handle/123456789/1999"
+  },
+  {
+    "id": 2,
+    "act": "Information Technology Act, 2000",
+    "section": "66",
+    "title": "Computer related offences",
+    "category": "Cybercrime",
+    "text": "Where a person dishonestly or fraudulently does an act referred to in section 43, the conduct may amount to a computer-related offence. The section provides criminal punishment for such dishonest or fraudulent unauthorised computer activity.",
+    "source": "https://www.indiacode.nic.in/handle/123456789/1999"
+  },
+  {
+    "id": 3,
+    "act": "Information Technology Act, 2000",
+    "section": "66C",
+    "title": "Identity theft",
+    "category": "Cybercrime",
+    "text": "This provision addresses fraudulent or dishonest use of another person's electronic signature, password or other unique identification feature. It is commonly associated with identity theft involving digital credentials.",
+    "source": "https://www.indiacode.nic.in/handle/123456789/1999"
+  },
+  {
+    "id": 4,
+    "act": "Information Technology Act, 2000",
+    "section": "66D",
+    "title": "Cheating by personation using computer resource",
+    "category": "Cybercrime",
+    "text": "This section concerns cheating by personation through a communication device or computer resource. Examples may include online impersonation and digital scams in which a person pretends to be someone else.",
+    "source": "https://www.indiacode.nic.in/handle/123456789/1999"
+  },
+  {
+    "id": 5,
+    "act": "Information Technology Act, 2000",
+    "section": "66E",
+    "title": "Violation of privacy",
+    "category": "Privacy",
+    "text": "This provision deals with intentionally or knowingly capturing, publishing or transmitting an image of a person's private area without consent, in circumstances violating that person's privacy.",
+    "source": "https://www.indiacode.nic.in/handle/123456789/1999"
+  },
+  {
+    "id": 6,
+    "act": "Information Technology Act, 2000",
+    "section": "67",
+    "title": "Electronic publication of obscene material",
+    "category": "Cybercrime",
+    "text": "This section addresses publishing or transmitting material that is lascivious or appeals to prurient interest, or whose effect is such as to tend to deprave and corrupt persons likely to read, see or hear it, in electronic form.",
+    "source": "https://www.indiacode.nic.in/handle/123456789/1999"
+  },
+  {
+    "id": 7,
+    "act": "Digital Personal Data Protection Act, 2023",
+    "section": "4",
+    "title": "Grounds for processing personal data",
+    "category": "Privacy",
+    "text": "This section sets out the grounds on which a person may process digital personal data. In general, processing is permitted for a lawful purpose on the basis of consent or certain legitimate uses recognised by the Act.",
+    "source": "https://www.indiacode.nic.in/"
+  },
+  {
+    "id": 8,
+    "act": "Digital Personal Data Protection Act, 2023",
+    "section": "6",
+    "title": "Consent",
+    "category": "Privacy",
+    "text": "This section describes consent as a freely given, specific, informed, unconditional and unambiguous indication of the data principal's wishes through a clear affirmative action, and addresses notice and withdrawal of consent.",
+    "source": "https://www.indiacode.nic.in/"
+  },
+  {
+    "id": 9,
+    "act": "Digital Personal Data Protection Act, 2023",
+    "section": "8",
+    "title": "General obligations of data fiduciary",
+    "category": "Privacy",
+    "text": "This provision sets out general obligations of a data fiduciary, including responsibility for compliance, security safeguards to prevent personal data breaches, and obligations relating to accuracy, retention and grievance redressal.",
+    "source": "https://www.indiacode.nic.in/"
+  },
+  {
+    "id": 10,
+    "act": "Constitution of India",
+    "section": "14",
+    "title": "Equality before law",
+    "category": "Constitution",
+    "text": "Article 14 guarantees equality before the law and equal protection of the laws within the territory of India. It is a foundational constitutional guarantee against arbitrary unequal treatment.",
+    "source": "https://legislative.gov.in/constitution-of-india/"
+  },
+  {
+    "id": 11,
+    "act": "Constitution of India",
+    "section": "19",
+    "title": "Protection of certain freedoms",
+    "category": "Constitution",
+    "text": "Article 19 guarantees specified freedoms to citizens, including freedom of speech and expression, subject to the constitutionally permitted reasonable restrictions.",
+    "source": "https://legislative.gov.in/constitution-of-india/"
+  },
+  {
+    "id": 12,
+    "act": "Constitution of India",
+    "section": "21",
+    "title": "Protection of life and personal liberty",
+    "category": "Constitution",
+    "text": "Article 21 states that no person shall be deprived of life or personal liberty except according to procedure established by law. Courts have interpreted it to protect important aspects of life, dignity and personal liberty.",
+    "source": "https://legislative.gov.in/constitution-of-india/"
+  },
+  {
+    "id": 13,
+    "act": "Indian Contract Act, 1872",
+    "section": "10",
+    "title": "What agreements are contracts",
+    "category": "Contracts",
+    "text": "This section describes the conditions under which agreements become contracts, including free consent of competent parties, lawful consideration and lawful object, and the requirement that the agreement is not expressly declared void.",
+    "source": "https://www.indiacode.nic.in/"
+  },
+  {
+    "id": 14,
+    "act": "Indian Contract Act, 1872",
+    "section": "73",
+    "title": "Compensation for loss or damage caused by breach of contract",
+    "category": "Contracts",
+    "text": "This provision concerns compensation for loss or damage naturally arising in the usual course from a breach of contract, or which the parties knew was likely when they made the contract, subject to the rules in the section.",
+    "source": "https://www.indiacode.nic.in/"
+  },
+  {
+    "id": 15,
+    "act": "Indian Contract Act, 1872",
+    "section": "124",
+    "title": "Contract of indemnity",
+    "category": "Contracts",
+    "text": "A contract of indemnity is a contract by which one party promises to save the other from loss caused by the conduct of the promisor or another person, as described in the Act.",
+    "source": "https://www.indiacode.nic.in/"
+  }
+]

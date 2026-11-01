@@ -1,0 +1,47 @@
+
+{% extends "base.html" %}
+
+{% block title %}IR PROJECT | Document Viewer{% endblock %}
+
+{% block content %}
+
+<section class="wrap pagehead">
+    <a href="/">← BACK TO HOME</a>
+</section>
+
+<div class="docbox">
+
+    <div class="eyebrow">
+        // DOCUMENT RECORD #{{ item.id }}
+    </div>
+
+    <h1>{{ item.title }}</h1>
+
+    <div class="meta">
+        {{ item.act }} | SECTION {{ item.section }}
+    </div>
+
+    <hr style="border-color:#1d3442; margin:25px 0;">
+
+    <h3>Legal Document Content</h3>
+
+    <p class="doc-text">
+        {{ item.text }}
+    </p>
+
+    <div class="notice">
+        Educational summary only. Refer to the official legal
+        source for the current statutory text.
+    </div>
+
+    <h3>Official Source</h3>
+
+    <div class="source">
+        <a href="{{ item.source }}" target="_blank" rel="noopener">
+            {{ item.source }}
+        </a>
+    </div>
+
+</div>
+
+{% endblock %}

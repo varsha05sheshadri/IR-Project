@@ -1,0 +1,126 @@
+
+{% extends "base.html" %}
+
+{% block title %}IR PROJECT | Search Results{% endblock %}
+
+{% block content %}
+
+<section class="wrap pagehead">
+
+    <div class="eyebrow">● QUERY EXECUTED</div>
+
+    <h1>Retrieved Intelligence</h1>
+
+    <p class="muted">
+        Search query: {{ query }}
+        | {{ results|length }} results found
+    </p>
+
+    <form action="/search" method="GET" class="searchbox">
+
+        <input type="text" name="q" value="{{ query }}" required>
+
+        <select name="category">
+
+            <option value="All">All Categories</option>
+
+            {% for c in categories %}
+
+            <option value="{{ c }}"
+                {% if category == c %}selected{% endif %}>
+                {{ c }}
+            </option>
+
+            {% endfor %}
+
+        </select>
+
+        <button type="submit" class="btn">
+            SEARCH →
+        </button>
+
+    </form>
+
+</section>
+
+
+<section class="wrap section">
+
+    {% if results %}
+
+    <div class="section-head">
+
+        <h2>Matching Legal Documents</h2>
+
+        <a class="btn secondary"
+           href="/export?q={{ query|urlencode }}&category={{ category|urlencode }}">
+            EXPORT CSV
+        </a>
+
+    </div>
+
+    <br>
+
+    <div class="results">
+
+        {% for r in results %}
+
+        <div class="result">
+
+            <div class="result-top">
+
+                <span class="tag">
+                    {{ r.category }}
+                </span>
+
+                <span class="score">
+                    {{ r.score_percent }}% MATCH
+                </span>
+
+            </div>
+
+            <h3>{{ r.title }}</h3>
+
+            <div class="meta">
+                {{ r.act }} | SECTION {{ r.section }}
+            </div>
+
+            <p>{{ r.snippet }}</p>
+
+            <div class="actions">
+
+                <a href="/document/{{ r.id }}">
+                    INSPECT DOCUMENT →
+                </a>
+
+                <a href="{{ r.source }}" target="_blank" rel="noopener">
+                    OFFICIAL SOURCE ↗
+                </a>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    {% else %}
+
+    <div class="empty">
+
+        <h2>No Matching Records Found</h2>
+
+        <p>
+            Try searching with different keywords.
+        </p>
+
+        <a href="/">← BACK TO HOME</a>
+
+    </div>
+
+    {% endif %}
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,154 @@
+
+{% extends "base.html" %}
+
+{% block title %}IR PROJECT | Cyber Intelligence{% endblock %}
+
+{% block content %}
+
+<section class="hero wrap">
+
+    <div class="eyebrow">
+        ● SYSTEM ONLINE / SEARCH ENGINE ACTIVE
+    </div>
+
+    <h1>
+        SEARCH THE LAW.<br>
+        <em>TRACE THE TRUTH.</em>
+    </h1>
+
+    <p>
+        An intelligent legal document retrieval system.
+        Search through legal provisions and retrieve relevant
+        sections using advanced information retrieval techniques.
+    </p>
+
+    <form action="/search" method="GET" class="searchbox">
+
+        <input
+            type="text"
+            name="q"
+            placeholder="Enter keyword: cybercrime, privacy, identity theft..."
+            required
+        >
+
+        <select name="category">
+            <option value="All">All Categories</option>
+            {% for c in categories %}
+                <option value="{{ c }}">{{ c }}</option>
+            {% endfor %}
+        </select>
+
+        <button type="submit" class="btn">
+            EXECUTE SEARCH →
+        </button>
+
+    </form>
+
+    <div class="stats">
+
+        <div class="stat">
+            <b>015</b>
+            <span>LEGAL RECORDS</span>
+        </div>
+
+        <div class="stat">
+            <b>TF-IDF</b>
+            <span>SEARCH ENGINE</span>
+        </div>
+
+        <div class="stat">
+            <b>ACTIVE</b>
+            <span>SYSTEM STATUS</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="wrap section">
+
+    <div class="section-head">
+        <div>
+            <div class="section-kicker">
+                // SYSTEM MONITOR
+            </div>
+
+            <h2>Terminal Status</h2>
+        </div>
+    </div>
+
+    <div class="terminal">
+
+        <div>root@ir-project:~$ initializing system...</div>
+
+        <div class="ok">[✓] Legal dataset loaded successfully</div>
+
+        <div class="ok">[✓] TF-IDF vectorizer initialized</div>
+
+        <div class="ok">[✓] Cosine similarity engine ready</div>
+
+        <div class="ok">[✓] Search module active</div>
+
+        <div class="ok">[✓] Database connection established</div>
+
+        <br>
+
+        <strong>
+            SYSTEM READY. WAITING FOR SEARCH QUERY...
+        </strong>
+
+    </div>
+
+</section>
+
+
+<section class="wrap section">
+
+    <div class="section-head">
+
+        <div>
+            <div class="section-kicker">
+                // ACTIVITY MONITOR
+            </div>
+
+            <h2>Recent Searches</h2>
+        </div>
+
+        <a href="/history">VIEW ALL →</a>
+
+    </div>
+
+    {% if recent %}
+
+    <div class="panel history-list">
+
+        {% for q,n,t in recent %}
+
+        <div class="history-row">
+
+            <a href="/search?q={{ q|urlencode }}">
+                > {{ q }}
+            </a>
+
+            <span class="muted">
+                {{ n }} results | {{ t }}
+            </span>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    {% else %}
+
+    <div class="empty">
+        No search activity yet. Start your first query!
+    </div>
+
+    {% endif %}
+
+</section>
+
+{% endblock %}
