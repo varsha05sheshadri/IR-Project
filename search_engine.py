@@ -34,14 +34,17 @@ class LegalSearchEngine:
                 results.append(result)
         results.sort(key=lambda x: x["score"], reverse=True)
         return results[:limit]
+@staticmethod
+def _snippet(text, query, width=190):
+    words = [w for w in re.findall(r"\w+", query.lower()) if len(w) > 2]
+    lower = text.lower()
 
-    @staticmethod
-    def _snippet(text, query, width=190):
-        words = [w for w in re.findall(r"\w+", query.lower()) if len(w) > 2]
-        lower = text.lower()
-        positions = [lower.find(w) for w in words if lower.find(w) >= 0]
-        if not positions:
-            return text[:width] + ("…" if len(text) > width else "")
-        start = max(0, min(positions) - 65)
-        end = min(len(text), start + width)
-        return ("…" if start else "") + text[start:end] + ("…" if end < len(text) else "")
+    positions = [lower.find(w) for w in words if lower.find(w) >= 0]
+
+    if not positions:
+        return text[:width] + ("…" if len(text) > width else "")
+
+    start = max(0, min(positions) - 65)
+    end = min(len(text), start + width)
+
+    return ("…" if start else "") + text[start:end] + ("…" if end < len(text) else "")
